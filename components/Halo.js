@@ -1,5 +1,5 @@
 import React from "react";
-import useMousePosition from "hooks/usemouseposition";
+import useMousePosition from "hooks/useMousePosition";
 import { motion } from "framer-motion";
 import cn from "clsx";
 
