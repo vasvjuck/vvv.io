@@ -34,7 +34,7 @@ export default function Home() {
             className="text-primary max-w-lg animate-in"
           >
             Hi, I&apos;m Vasyl Vasiuk, a frontend engineer who loves building cool
-            things with code.
+            things with code 👨‍💻
           </p>
           <ul
             className="flex flex-col md:flex-row gap-2 md:gap-6 text-secondary animated-list animate-in"
