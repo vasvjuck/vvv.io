@@ -31,7 +31,6 @@ const Logo = () => {
 const links = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Gear", href: "/gear" },
 ];
 
 const Header = () => {

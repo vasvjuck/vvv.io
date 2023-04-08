@@ -11,10 +11,10 @@ export default function MyApp({
   Component,
   pageProps,
 }) {
-  const getLayout =
-    Component.getLayout ??
+  const layout =
+    Component.layout ??
     (page => (
-      <main className="px-6 md:px-6 pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto ring-offset-primary ">
+      <main className="px-6 md:px-6 pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto ring-offset-primary">
         {page}
       </main>
     ));
@@ -46,7 +46,7 @@ export default function MyApp({
       </Head>
       <div className="antialiased bg-primary text-primary width-full">
         <Header />
-        {getLayout(<Component {...pageProps} />)}
+        {layout(<Component {...pageProps} />)}
       </div>
     </ThemeProvider>
   );
