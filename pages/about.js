@@ -90,6 +90,7 @@ export default function About() {
               <p>Hello, I&apos;m Vasyl Vasiuk!</p>
 
               <p>
+                {/* TODO */}
                 I&apos;m a frontend engineer currently working at{" "}
                 <a
                   className="underline"
@@ -98,10 +99,7 @@ export default function About() {
                 >
                   Moonshiner
                 </a>
-                , web development company based in Vienna.{" "}
-                {/* TODO */}
-                I have a passion for design and am always looking for ways to
-                incorporate it into my work.
+                , web development company based in Vienna.
               </p>
             </div>
           </Section>
