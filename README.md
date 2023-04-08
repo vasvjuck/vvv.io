@@ -8,8 +8,8 @@
 ## Running Locally
 
 ```bash
-git clone https://github.com/leerob/leerob.io.git
-cd leerob.io
+git clone https://github.com/vasvjuck/vvv.io.git
+cd vvv.io
 yarn install
 yarn dev
 ```
