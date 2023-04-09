@@ -147,7 +147,7 @@ export default function About() {
             <div className="flex flex-col w-full gap-8">
               <p>
                 {new Date().getFullYear() - 2021}+ years of professional development
-                experience 🤯😳
+                experience 😳
               </p>
               <p>
                 Story about my experience | whoop whoop 🥳
