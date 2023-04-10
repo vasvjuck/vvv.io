@@ -1,36 +1,36 @@
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 
-import Link from "components/Link";
 import Section from "components/Section";
 import Workplaces from "components/Workplaces";
 import Gallery from "components/Gallery";
-import ConnectLinks from "components/ConnectLinks";
 
 import dc from "public/gallery/dc.jpg";
 import avatar from "public/gallery/avatar.jpg";
+import moonshiner from "public/work/moon.jpeg";
+import linkup from "public/work/linkup.jpeg";
+import wunu from "public/work/wunu.jpeg";
 
-// TODO: 
 const workplaces = [
   {
     title: "FrontEnd Developer",
     company: "Moonshiner",
     time: "2022 - Present",
-    // imageSrc: hinesLogo,
+    imageSrc: moonshiner,
     link: "https://moonshiner.at/",
   },
   {
-    title: "FrontEnd Insternship",
+    title: "FrontEnd Academy | Insternship",
     company: "LinkUp",
     time: "2021 - 2022",
-    // imageSrc: perishipLogo,
+    imageSrc: linkup,
     link: "https://linkupst.com/",
   },
   {
     title: "Information System & Technologies",
     company: "West Unkrainian University",
     time: "2020 - Present",
-    // imageSrc: uhdLogo,
+    imageSrc: wunu,
   },
 ];
 
@@ -103,46 +103,7 @@ export default function About() {
               </p>
             </div>
           </Section>
-
-          <Section heading="Links" headingAlignment="left" >
-            <div className="flex flex-col w-full gap-8">
-              <p>
-                Have a question or just want to chat? Feel free to {" "}
-                <a href="mailto:contact@vasiuk.br09@gmail.com" className="underline">email me</a>.
-              </p>
-              <ul className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-2 animated-list">
-                {ConnectLinks.map(link => (
-                  <li
-                    className="transition-opacity col-span-1"
-                    key={link.label}
-                  >
-                    <Link
-                      href={link.href}
-                      className="transition-opacity no-underline w-full border rounded-lg p-4 border-primary inline-grid"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="text-xl">{link.icon}</span>
-                        {link.label}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          className="w-5 h-5 ml-auto text-secondary"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Section>
-
+          {/* TODO: skils */}
           <Section heading="Work" headingAlignment="left">
             <div className="flex flex-col w-full gap-8">
               <p>

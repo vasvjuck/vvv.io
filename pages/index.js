@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import avatar from "public/avatar.jpg";
+import avatar from "public/avatar-round.jpeg";
 import Link from "components/Link";
 
 
@@ -25,8 +25,10 @@ export default function Home() {
           >
             <Image
               src={avatar}
+              width={100}
+              height={100}
               alt="avatar"
-              className="rounded-full bg-secondary w-20 h-20 object-contain"
+              className="rounded-full bg-secondary  animate-in"
             />
             {/* TODO: statistic */}
           </div>
