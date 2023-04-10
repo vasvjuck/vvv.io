@@ -5,11 +5,16 @@ import NavLink from "./NavLink";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { motion } from 'framer-motion';
 
-import { Fragment } from 'react'
+import whiteTurtle from "public/turtle-white.svg";
+import blackTurtle from "public/turtle-black.svg";
+
+import { Fragment, useEffect, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from "clsx";
+import { useTheme } from "next-themes";
 
-const Logo = () => {
+
+const Logo = ({ theme }) => {
     return (
         <Link aria-label="Vasyl Vasiuk" href="/">
             {/* TODO: check svg | or own paht */}
@@ -22,7 +27,7 @@ const Logo = () => {
                     stiffness: 50,
                 }}
                 className="h-[28px] md:h-[37px]"
-                src="https://img.icons8.com/ios/256/ninja-turtle.png"
+                src={theme === 'light' ? blackTurtle.src : whiteTurtle.src}
             />
         </Link>
     );
@@ -36,12 +41,18 @@ const links = [
 
 const Header = () => {
     const router = useRouter();
-    const pathname = `/${router.pathname.split("/")[1]}`; // active paths on dynamic subpages
+    const pathname = `/ ${router.pathname.split("/")[1]}`; // active paths on dynamic subpages
+    const { theme } = useTheme();
+    const [themeValue, setThemeValue] = useState();
+
+    useEffect(() => {
+        setThemeValue(theme)
+    }, [theme])
 
     return (
         <header className="sticky top-0 z-20 main-header backdrop-blur-md bg-primary md:bg-header">
             <nav className="px-4 md:px-6 py-3 lg max-w-[700px] mx-auto flex justify-between items-center gap-3">
-                <Logo />
+                <Logo theme={themeValue} />
                 <ul className="hidden md:flex items-center gap-1">
                     {links.map((link) => (
                         <li key={link.href}>
@@ -85,7 +96,6 @@ const Header = () => {
                         </Popover.Panel>
                     </Transition>
                 </Popover>
-
                 <div className="flex items-center justify-center w-8 h-8">
                     <ThemeSwitcher />
                 </div>

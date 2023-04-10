@@ -15,21 +15,21 @@ const workplaces = [
   {
     title: "FrontEnd Developer",
     company: "Moonshiner",
-    time: "2022 - Present",
+    time: "06.2022 - Present",
     imageSrc: moonshiner,
     link: "https://moonshiner.at/",
   },
   {
     title: "FrontEnd Academy | Insternship",
     company: "LinkUp",
-    time: "2021 - 2022",
+    time: "11.2021 - 02.2022",
     imageSrc: linkup,
     link: "https://linkupst.com/",
   },
   {
     title: "Information System & Technologies",
-    company: "West Unkrainian University",
-    time: "2020 - Present",
+    company: "West Ukrainian National University",
+    time: "09.2020 - Present",
     imageSrc: wunu,
   },
 ];

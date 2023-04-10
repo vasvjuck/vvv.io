@@ -134,7 +134,7 @@ export default function Gallery() {
         <Photo
           src={goal}
           meta="2022-09-10"
-          alt="Ahhh, this porsche 🔥💦"
+          alt="Ahhh, this porsche 💦"
           width={220}
           height={260}
           rotate={7.6}

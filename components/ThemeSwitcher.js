@@ -7,7 +7,6 @@ import { useTheme } from "next-themes";
 import { IconArc, IconCheck, IconMoon, IconSun } from "./Icons";
 
 const themes = [
-    { id: "system", label: "Automatic" },
     { id: "light", label: "Light" },
     { id: "dark", label: "Dark" },
     { id: "arc", label: "Arc" },

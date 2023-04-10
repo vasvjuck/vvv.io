@@ -34,6 +34,7 @@ export default function MyApp({
   return (
     <ThemeProvider
       attribute="class"
+      enableSystem={false}
       value={{
         light: "light-theme",
         dark: "dark-theme",
