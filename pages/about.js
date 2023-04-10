@@ -124,7 +124,8 @@ export default function About() {
         openGraph={{
           title: seoTitle,
           description: seoDesc,
-          url: `https://samuelkraft.com/about/`,
+          // TODO
+          url: `https://vvv-io.vercel.app/about/`,
           site_name: "Vasyl Vasiuk",
         }}
         twitter={{

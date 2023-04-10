@@ -9,12 +9,12 @@ const config = {
     url: "https://vvv.io",
     site_name: "Vasyl Vasiuk",
     // TODO
-    images: [
-      {
-        url: "https://samuelkraft.com/og.jpg",
-        alt: "Vasyl Vasiuk",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://samuelkraft.com/og.jpg",
+    //     alt: "Vasyl Vasiuk",
+    //   },
+    // ],
   },
 };
 
