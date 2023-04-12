@@ -36,6 +36,7 @@ const Logo = ({ theme }) => {
 const links = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Skills", href: "/skills" },
     { label: "Links", href: "/links" },
 ];
 

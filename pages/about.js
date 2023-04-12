@@ -38,7 +38,7 @@ const seoTitle = "About | Vasyl Vasiuk";
 const seoDesc =
   "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.";
 
-export default function About() {
+const About = () => {
   return (
     <>
       <div className="flex flex-col gap-16 md:gap-24">
@@ -135,3 +135,5 @@ export default function About() {
     </>
   );
 }
+
+export default About;
