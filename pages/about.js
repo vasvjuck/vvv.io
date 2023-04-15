@@ -128,9 +128,6 @@ const About = () => {
           url: `https://vvv-io.vercel.app/about/`,
           site_name: "Vasyl Vasiuk",
         }}
-        twitter={{
-          cardType: "summary_large_image",
-        }}
       />
     </>
   );

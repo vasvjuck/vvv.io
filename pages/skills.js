@@ -13,9 +13,15 @@ import {
   docker,
   nextjs,
   zustand,
-  githubActions
+  githubActions,
 } from "public/icons";
-import BallCanvas from 'components/BallCanvas'
+import cn from "clsx";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import SkillsList from "@/components/skillsList";
+import Section from "@/components/Section";
+
+const BallCanvas = dynamic(() => import('components/BallCanvas'));
 
 const seoTitle = "Skills | Vasyl Vasiuk";
 const seoDesc =
@@ -24,31 +30,45 @@ const seoDesc =
 const technologies = [
   {
     name: "Core Skills: ",
-    elements: [html, css, javascript, typescript],
+    elements: [
+      { name: 'Html', icon: html },
+      { name: 'Css', icon: css, },
+      { name: 'Javascript', icon: javascript },
+      { name: 'Typescript', icon: typescript }
+    ],
   },
   {
     name: "Frameworks: ",
-    elements: [nextjs, reactjs]
+    elements: [
+      { name: 'NextJs', icon: nextjs, href: 'https://nextjs.org/' },
+      { name: 'ReactJs', icon: reactjs, href: 'https://react.dev/' }
+    ]
   },
   {
     name: "State Management: ",
-    elements: [redux, zustand]
+    elements: [
+      { name: 'Redux', icon: redux, href: 'https://redux.js.org/' },
+      { name: 'Zustand', icon: zustand, href: 'https://zustand-demo.pmnd.rs/' }
+    ]
   },
   {
     name: "Database: ",
-    elements: [mongodb],
+    elements: [{ name: 'MongoDb', icon: mongodb, href: 'https://www.mongodb.com/' }],
   },
   {
     name: "Devops: ",
-    elements: [docker, githubActions]
+    elements: [
+      { name: 'Docker', icon: docker, href: 'https://docs.docker.com/' },
+      { name: 'GitHub Actions', icon: githubActions, href: 'https://docs.github.com/en/actions' }
+    ]
   },
   {
     name: "Design: ",
-    elements: [figma]
+    elements: [{ name: 'Figma', icon: figma, href: 'https://www.figma.com/' }]
   },
   {
     name: "Tools: ",
-    elements: [git]
+    elements: [{ name: 'Git', icon: git, href: 'https://git-scm.com/' }]
   }
   // TODO and other tools
   //   name: "Node JS",
@@ -57,9 +77,11 @@ const technologies = [
 ];
 
 export default function Skills() {
+  const [initialView, setInitialView] = useState(true)
+
   return (
     <>
-      <div className="flex flex-col gap-16 md:gap-24">
+      <div className="flex flex-col gap-4 md:gap-8">
         <div>
           <h1 className="animate-in text-3xl font-bold tracking-tight">
             Skills
@@ -70,25 +92,52 @@ export default function Skills() {
             Just a quick glimpse.
           </p>
         </div>
-        <ul
-          className="flex-grow grid grid-cols-1 gap-2 lg:gap-3 animated-list animate-in"
-        >
-          {
-            technologies.map(technology => (
-              <div className="flex items-center	gap-2 lg:gap-3" key={technology.name}>
-                <p className="animate-i text-secondary font-semibold animate-in">{technology.name}</p>
-                {
-                  technology.elements.map((icon, index) => (
-                    <div className="w-14 h-14 lg:w-20 lg:h-20 cursor-pointer" key={index}>
-                      <BallCanvas icon={icon} />
-                    </div>
-                  ))
-                }
-              </div>
-            ))
-          }
+        <ul className="flex items-center gap-1">
+          <button
+            className={cn(
+              "px-4 py-2 rounded-lg text-sm hover:text-primary transition-colors",
+              initialView ? "bg-secondaryA text-primary" : "text-secondary"
+            )}
+            onClick={() => setInitialView(true)}
+          >
+            Boring 🤓
+          </button>
+          <button
+            className={cn(
+              "px-4 py-2 rounded-lg text-sm hover:text-primary transition-colors",
+              !initialView ? "bg-secondaryA text-primary" : "text-secondary"
+            )}
+            onClick={() => setInitialView(false)}
+          >
+            Cool 😎
+          </button>
         </ul>
-      </div>
+        {
+          initialView ? (
+            <div className="animate-in">
+              <SkillsList skills={technologies} />
+            </div>
+          ) : (
+            <div>
+              {
+                technologies.map(technology => (
+                  <Section key={technology} heading={technology.name} headingAlignment="left">
+                    <div className="flex items-center	gap-3 ">
+                      {
+                        technology.elements.map((el, index) => (
+                          <div className="w-14 h-14 lg:w-20 lg:h-20 cursor-pointer" key={index}>
+                            <BallCanvas icon={el.icon} />
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </Section>
+                ))
+              }
+            </div>
+          )
+        }
+      </div >
       <NextSeo
         title={seoTitle}
         description={seoDesc}
@@ -98,9 +147,6 @@ export default function Skills() {
           // TODO
           url: `https://vvv-io.vercel.app/about/`,
           site_name: "Vasyl Vasiuk",
-        }}
-        twitter={{
-          cardType: "summary_large_image",
         }}
       />
     </>

@@ -6,10 +6,10 @@ const Section = ({
   children,
 }) => {
   return (
-    <section className="flex flex-col md:flex-row gap-2 md:gap-9 col-reverse">
+    <section className="flex flex-col md:flex-row gap-2 md:gap-9 col-reverse items-center">
       <h2
         className={cn(
-          "md:w-28 text-secondary shrink-0",
+          "text-secondary shrink-0",
           headingAlignment === "right" && "md:text-right"
         )}
       >

@@ -83,16 +83,6 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        {/* TODO - projects | samuelkraft-next */}
-        {/* <div
-          className="flex flex-col gap-8 animate-in"
-        >
-          <h2>Latest Blogs</h2>
-          <PostList posts={posts} />
-          <Link href="/blog" className="items-start underline">
-            See All
-          </Link>
-        </div> */}
       </div>
     </>
   );

@@ -8,13 +8,6 @@ const config = {
     locale: "en_US",
     url: "https://vvv.io",
     site_name: "Vasyl Vasiuk",
-    // TODO
-    // images: [
-    //   {
-    //     url: "https://samuelkraft.com/og.jpg",
-    //     alt: "Vasyl Vasiuk",
-    //   },
-    // ],
   },
 };
 
