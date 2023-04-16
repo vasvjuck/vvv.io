@@ -2,6 +2,8 @@ import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 
+import whiteTurtle from "public/turtle-white.svg";
+
 import SEO from "components/seo";
 
 import "../styles/globals.css";
@@ -32,6 +34,7 @@ export default function MyApp({
       <SEO />
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:image" content={whiteTurtle} />
       </Head>
       <div className="antialiased bg-primary text-primary width-full">
         <Header />
