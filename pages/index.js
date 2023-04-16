@@ -4,8 +4,6 @@ import { NextSeo } from "next-seo";
 import avatar from "public/avatar-round.jpeg";
 import Link from "components/Link";
 
-import whiteTurtle from "public/turtle-white.svg";
-
 const seoTitle = "Home | Vasyl Vasiuk";
 const seoDesc =
   "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.";
@@ -97,12 +95,6 @@ export default function Home() {
           description: seoDesc,
           url: `https://vvv-io.vercel.app/`,
           site_name: "Vasyl Vasiuk",
-          images: [
-            {
-              url: whiteTurtle.src,
-              alt: 'whiteTurtle.src'
-            }
-          ]
         }}
       />
     </>
