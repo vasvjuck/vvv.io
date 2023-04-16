@@ -45,7 +45,7 @@ export default function SkillsList({ skills }) {
   return (
     <>
       {skills.map(skill => (
-        <Section key={skill.name} heading={skill.name} headingAlignment="left">
+        <Section className="md:items-center" key={skill.name} heading={skill.name} headingAlignment="left">
           <SkillElement listRef={listRef} handleMouseMove={handleMouseMove} skill={skill} mousePosition={mousePosition} />
         </Section>
       ))}

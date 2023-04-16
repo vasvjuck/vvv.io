@@ -114,7 +114,7 @@ export default function Gallery() {
         <Photo
           src={dc}
           meta="2021-07-12"
-          alt="DC Tower Vienna 🏙️"
+          alt="🧑‍🚀🏙️"
           width={364}
           height={239}
           rotate={-6}
@@ -124,7 +124,7 @@ export default function Gallery() {
         <Photo
           src={carpaty}
           meta="2021-05-20"
-          alt="Waterfall 🌊"
+          alt="⛰️🌊"
           width={230}
           height={250}
           rotate={-5.4}
@@ -134,7 +134,7 @@ export default function Gallery() {
         <Photo
           src={goal}
           meta="2022-09-10"
-          alt="Ahhh, this porsche 💦"
+          alt="😻💦"
           width={220}
           height={260}
           rotate={7.6}

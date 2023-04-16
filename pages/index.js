@@ -30,7 +30,6 @@ export default function Home() {
               alt="avatar"
               className="rounded-full bg-secondary  animate-in"
             />
-            {/* TODO: statistic */}
           </div>
           <p
             className="text-primary max-w-lg animate-in"

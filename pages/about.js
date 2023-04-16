@@ -9,6 +9,7 @@ import dc from "public/gallery/dc.jpg";
 import avatar from "public/gallery/avatar.jpg";
 import moonshiner from "public/work/moon.jpeg";
 import linkup from "public/work/linkup.jpeg";
+import softserve from "public/work/softserve.jpeg";
 import wunu from "public/work/wunu.jpeg";
 
 const workplaces = [
@@ -20,9 +21,16 @@ const workplaces = [
     link: "https://moonshiner.at/",
   },
   {
+    title: "Web UI Insternship",
+    company: "SoftServe",
+    time: "01.2022 - 02.2022",
+    imageSrc: softserve,
+    link: "https://www.softserveinc.com/",
+  },
+  {
     title: "FrontEnd Academy | Insternship",
     company: "LinkUp",
-    time: "11.2021 - 02.2022",
+    time: "11.2021 - 01.2022",
     imageSrc: linkup,
     link: "https://linkupst.com/",
   },
@@ -83,11 +91,11 @@ const About = () => {
           <Gallery />
         </div>
         <div
-          className="flex flex-col gap-12 animate-in md:gap-16"
+          className="mt-4 md:mt-0 flex flex-col gap-12 animate-in md:gap-16"
         >
           <Section heading="About" headingAlignment="left">
             <div className="flex flex-col gap-6">
-              <p>Hello, I&apos;m Vasyl Vasiuk!</p>
+              <p>Hey, </p>
 
               <p>
                 {/* TODO */}
@@ -103,13 +111,13 @@ const About = () => {
               </p>
             </div>
           </Section>
-          {/* TODO: skils */}
           <Section heading="Work" headingAlignment="left">
             <div className="flex flex-col w-full gap-8">
               <p>
-                {new Date().getFullYear() - 2022}+ years of professional development
+                {new Date().getFullYear() - 2021}+ years of professional development
                 experience 🤯😳
               </p>
+              {/* TODO:  */}
               <p>
                 Story about my experience | whoop whoop 🥳
               </p>
@@ -124,7 +132,6 @@ const About = () => {
         openGraph={{
           title: seoTitle,
           description: seoDesc,
-          // TODO
           url: `https://vvv-io.vercel.app/about/`,
           site_name: "Vasyl Vasiuk",
         }}

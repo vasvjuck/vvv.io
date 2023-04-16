@@ -1,6 +1,5 @@
 import Link from "components/Link";
 import Image from "next/image";
-import cn from "clsx";
 
 const Workplace = ({ title, company, imageSrc, time, link }) => {
   const content = (
@@ -11,11 +10,6 @@ const Workplace = ({ title, company, imageSrc, time, link }) => {
           alt={company}
           width={48}
           height={48}
-          className={
-            cn("rounded-full",
-              // TODO
-              company === 'University of Houston' && "bg-white",
-            )}
         />
         <div className="flex flex-col gap-px">
           <p className={link ? "external-arrow" : ""}>{title}</p>

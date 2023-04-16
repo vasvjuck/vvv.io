@@ -17,7 +17,6 @@ import { useTheme } from "next-themes";
 const Logo = ({ theme }) => {
     return (
         <Link aria-label="Vasyl Vasiuk" href="/">
-            {/* TODO: check svg | or own paht */}
             <motion.img
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

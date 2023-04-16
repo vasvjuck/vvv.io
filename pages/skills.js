@@ -18,8 +18,8 @@ import {
 import cn from "clsx";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import SkillsList from "@/components/skillsList";
-import Section from "@/components/Section";
+import SkillsList from "components/skillsList";
+import Section from "components/Section";
 
 const BallCanvas = dynamic(() => import('components/BallCanvas'));
 
@@ -89,7 +89,7 @@ export default function Skills() {
           <p
             className="text-secondary animate-in"
           >
-            Just a quick glimpse.
+            Whaaattttttttttt? 😳🫣🤭
           </p>
         </div>
         <ul className="flex items-center gap-1">
@@ -121,7 +121,7 @@ export default function Skills() {
             <div>
               {
                 technologies.map(technology => (
-                  <Section key={technology} heading={technology.name} headingAlignment="left">
+                  <Section key={technology} className="md:items-center" heading={technology.name} headingAlignment="left">
                     <div className="flex items-center	gap-3 ">
                       {
                         technology.elements.map((el, index) => (
@@ -144,7 +144,6 @@ export default function Skills() {
         openGraph={{
           title: seoTitle,
           description: seoDesc,
-          // TODO
           url: `https://vvv-io.vercel.app/about/`,
           site_name: "Vasyl Vasiuk",
         }}

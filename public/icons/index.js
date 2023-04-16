@@ -9,7 +9,7 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import typescript from "./tech/typescript.png";
-import nextjs from "./tech/nextjs.png";
+import nextjs from "./tech/nextjs-2.png";
 import zustand from "./tech/zustand-logo.png";
 import githubActions from "./tech/githubActions.png";
 
