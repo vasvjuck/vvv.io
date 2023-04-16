@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "components/Link";
 import ConnectLinks from "components/ConnectLinks";
+import { NextSeo } from "next-seo";
 
 import avatar from "public/avatar-round.jpeg";
+
+const seoTitle = "Links | Vasyl Vasiuk";
+const seoDesc =
+  "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.";
+
 
 const Links = () => {
   return (
@@ -58,6 +64,16 @@ const Links = () => {
           ))}
         </ul>
       </div>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vvv-io.vercel.app/links/`,
+          site_name: "Vasyl Vasiuk",
+        }}
+      />
     </>
   );
 }
