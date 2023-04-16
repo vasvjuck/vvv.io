@@ -4,7 +4,7 @@ import { NextSeo } from "next-seo";
 import avatar from "public/avatar-round.jpeg";
 import Link from "components/Link";
 
-const seoTitle = "About | Vasyl Vasiuk";
+const seoTitle = "Home | Vasyl Vasiuk";
 const seoDesc =
   "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.";
 
@@ -93,7 +93,7 @@ export default function Home() {
         openGraph={{
           title: seoTitle,
           description: seoDesc,
-          url: `https://vvv-io.vercel.app/about/`,
+          url: `https://vvv-io.vercel.app/`,
           site_name: "Vasyl Vasiuk",
         }}
       />

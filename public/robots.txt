@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://vvv-io.vercel.app/sitemap.xml
