@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 import SEO from "components/seo";
 
@@ -18,18 +18,6 @@ export default function MyApp({
         {page}
       </main>
     ));
-
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   const handleRouteChange = (url) => {
-  //     gtag.pageview(url);
-  //   };
-  //   router.events.on("routeChangeComplete", handleRouteChange);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChange);
-  //   };
-  // }, [router.events]);
 
   return (
     <ThemeProvider
@@ -49,6 +37,7 @@ export default function MyApp({
         <Header />
         {layout(<Component {...pageProps} />)}
       </div>
+      <Analytics />
     </ThemeProvider>
   );
 }
