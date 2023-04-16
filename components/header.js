@@ -16,7 +16,7 @@ import { useTheme } from "next-themes";
 
 const Logo = ({ theme }) => {
     return (
-        <Link aria-label="Vasyl Vasiuk" href="/">
+        <Link aria-label="Vasyl Vasiuk" href="/home">
             <motion.img
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
