@@ -1,8 +1,12 @@
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 import avatar from "public/avatar-round.jpeg";
 import Link from "components/Link";
 
+const seoTitle = "About | Vasyl Vasiuk";
+const seoDesc =
+  "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.";
 
 export default function Home() {
   return (
@@ -83,6 +87,16 @@ export default function Home() {
           </ul>
         </div>
       </div>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vvv-io.vercel.app/about/`,
+          site_name: "Vasyl Vasiuk",
+        }}
+      />
     </>
   );
 }
