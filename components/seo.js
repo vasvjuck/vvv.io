@@ -2,12 +2,17 @@ import { DefaultSeo } from "next-seo";
 
 const config = {
   title: "Vasyl Vasiuk",
-  description: "Hi, im a frontend engineer who loves building cool things with code",
+  description: "Vasyl Vasiuk, a frontend software engineer who loves building cool things with code.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://vvv-io.vercel.app/",
-    images: [],
+    images: [
+      {
+        url: 'https://vvv-io.vercel.app/_next/static/media/turtle-black.79820721.svg',
+        alt: 'turtle'
+      }
+    ],
     site_name: "Vasyl Vasiuk",
   },
 };
