@@ -7,7 +7,7 @@ import avatar from "public/avatar-round.jpeg";
 const Links = () => {
   return (
     <>
-      <div className="flex flex-col gap-16 md:gap-24">
+      <div className="flex flex-col gap-4 md:gap-8">
         <div className="flex flex-col gap-8 animate-in">
           <Image
             src={avatar}
